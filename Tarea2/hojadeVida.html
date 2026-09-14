@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida Personal</title>
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Consolas', 'Fira Code', monospace, sans-serif;
+            background-color: #fefefe;
+            color: #94a3b8;
+            margin: 0;
+            padding: 40px 15px;
+        }
+
+        .cv-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background-color: #0f172a;
+            padding: 35px;
+            border-radius: 12px;
+            border: 1px solid #1e293b;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .seccion-header {
+            display: flex;
+            align-items: center;
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .foto-perfil {
+            width: 90px;
+            height: 120px;
+            border-radius: 8px;
+            object-fit: cover;
+            object-position: center top;
+            border: 2px solid #1053b9;
+            margin-right: 25px;
+        }
+
+        .datos-header h1 {
+            margin: 0 0 5px 0;
+            font-size: 24px;
+            color: #f8fafc;
+        }
+
+        .datos-header h3 {
+            margin: 0 0 12px 0;
+            color: #10aeb9;
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        .datos-contacto p {
+            margin: 3px 0;
+            font-size: 13px;
+            color: #cbd5e1;
+        }
+
+        .datos-contacto strong { color: #38bdf8; }
+
+        .titulo-seccion {
+            font-size: 15px;
+            color: #38bdf8;
+            border-bottom: 1px dashed #334155;
+            padding-bottom: 8px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-transform: lowercase;
+        }
+        
+        .titulo-seccion::before { color: #64748b; }
+
+        .card-info {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-left: 4px solid #0b9cdf;
+            padding: 16px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            color: #f1f5f9;
+            font-size: 14px;
+        }
+
+        .card-subtitulo {
+            color: #38bdf8;
+            font-size: 13px;
+            margin-top: 4px;
+        }
+
+        .card-detalle {
+            font-size: 13px;
+            margin-top: 8px;
+            color: #94a3b8;
+        }
+
+        .tabla-referencias {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background-color: #1e293b;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .tabla-referencias th {
+            background-color: #334155;
+            color: #38bdf8;
+            padding: 10px;
+            text-align: right;
+            font-size: 12px;
+        }
+
+        .tabla-referencias td {
+            padding: 8px 8px;
+            border-bottom: 1px solid #334155;
+            font-size: 13px;
+            color: #cbd5e1;
+        }
+
+        .tabla-referencias tr:nth-child(even) { background-color: #182232; }
+    </style>
+</head>
+<body>
+
+    <!-- Contenedor principal -->
+    <div class="cv-container">
+
+        <!-- 1. Datos personales -->
+        <div class="seccion-header">
+            <img src="FotoPerfil.jpeg" alt="Foto de Perfil" class="foto-perfil">
+            <div class="datos-header">
+                <h1>Hoja de vida personal</h1>
+                <h3>Estudiante de Ingeniería en Software</h3>
+                <div class="datos-contacto">
+                    <p><strong>Cédula:</strong> 1315179570</p>
+                    <p><strong>Teléfono:</strong> 0989280788</p>
+                    <p><strong>Correo:</strong> e1315179570@live.uleam.edu.ec</p>
+                    <p><strong>Ubicación:</strong> Manta, Manabí, Ecuador</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Estudios realizados -->
+        <div class="titulo-seccion">Estudios Realizados</div>
+        
+        <div class="card-info">
+            <div class="card-header">
+                <span>Ingeniería en Software</span>
+                <span>2024 – Presente</span>
+            </div>
+            <div class="card-subtitulo">Universidad Laica Eloy Alfaro de Manabí (ULEAM)</div>
+            <div class="card-detalle">
+                Cursando Cuarto Nivel.
+            </div>
+        </div>
+
+        <div class="card-info">
+            <div class="card-header">
+                <span>Bachillerato Técnico</span>
+                <span>2021 – 2024</span>
+            </div>
+            <div class="card-subtitulo">Unidad Educativa Kerlly Annabelle Torres Cedeño</div>
+            <div class="card-detalle">
+                Bachillerato en ciencias.
+            </div>
+        </div>
+
+        <!-- 3. Experiencia laboral -->
+        <div class="titulo-seccion">Experiencia Laboral </div>
+        
+        <div class="card-info">
+            <div class="card-header">
+                <span>Desarrollador de Proyecto Académico</span>
+                <span>2026</span>
+            </div>
+            <div class="card-subtitulo">Sistema de Nivelación Académica (ULEAM)</div>
+            <div class="card-detalle">
+                Desarrollo en Python con integración a SQL Server.
+            </div>
+        </div>
+
+        <div class="card-info">
+            <div class="card-header">
+                <span>Configuracion de dispositivos</span>
+                <span>2021-2026</span>
+            </div>
+            <div class="card-subtitulo">Configuracion de software en televisores y computadoras</div>
+            <div class="card-detalle">
+                Configuracion general de televisores y computadoras.
+            </div>
+        </div>
+        <div class="card-info">
+            <div class="card-header">
+                <span>Instalacion de cortinas</span>
+                <span>2021-2026</span>
+            </div>
+            <div class="card-subtitulo">Instalacion y mantenimiento de todo tipo de cortinas</div>
+            <div class="card-detalle">
+                servicio de colocacion, instalacion y mantenimiento de cortinas.
+            </div>
+        </div>
+
+        <!-- 4. Capacitaciones -->
+        <div class="titulo-seccion">Capacitaciones</div>
+
+        <div class="card-info">
+            <div class="card-header">
+                <span>Configuración de Redes de Datos</span>
+                <span>2026</span>
+            </div>
+            <div class="card-subtitulo">Cisco Packet Tracer</div>
+            <div class="card-detalle">
+                Configuración de VLANs, enrutamiento Inter-VLAN y listas de control de acceso (ACL).
+            </div>
+        </div>
+        <div class="card-info">
+            <div class="card-header">
+                <span>ICLSET 2026</span>
+                <span>2026</span>
+            </div>
+            <div class="card-subtitulo">International Conference on Life Sciences and Emerging Technologies (Conferencia Internacional de Ciencias de la Vida y Tecnologías Emergentes)</div>
+            <div class="card-detalle">
+                congreso académico internacional enfocado en el intercambio de conocimientos, la innovación científica y el desarrollo sostenible.
+            </div>
+        </div>
+
+        <!-- 5. Referencias personales -->
+        <div class="titulo-seccion">Referencias Personales</div>
+        
+        <table class="tabla-referencias">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Cargo / Profesión</th>
+                    <th>Teléfono</th>
+                    <th>Correo Electrónico</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ing. Oscar Briones Maldonado</td>
+                    <td>Docente de Programación</td>
+                    <td>0991234567</td>
+                    <td>oscari.briones@uleam.edu.ec</td>
+                </tr>
+                <tr>
+                    <td>Ing. Sendon Varela Juan Carlos</td>
+                    <td>Docente de ciencias informaticas</td>
+                    <td>0987654321</td>
+                    <td>juan.sendon@uleam.edu.ec</td>
+                </tr>
+                <tr>
+                    <td>Ing. Moreira Centeno Robert Wilfrido</td>
+                    <td>Docente de ciencias informaticas</td>
+                    <td>0998765432</td>
+                    <td>robert.moreira@uleam.edu.ec</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+</html>
