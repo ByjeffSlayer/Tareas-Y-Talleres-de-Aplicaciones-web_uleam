@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de clientes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+  <div class="form-container">
+  <h2>Registro de Cliente</h2>
+  <p>Porfavor Ingrese los datos correspondientes.</p>
+
+  <form id="clienteForm" class="client-form" novalidate>
+    
+    <!-- Cédula -->
+    <div class="form-group">
+      <label for="cedula">Cédula</label>
+      <input type="text" id="cedula" name="cedula" placeholder="Ej. 1312345678">
+      <span id="errorCedula" class ="hint">10 dígitos</span>
+    </div>
+
+    <!-- Teléfono Celular -->
+    <div class="form-group">
+      <label for="telefono">Teléfono Celular</label>
+      <input type="text" id="telefono" name="telefono" placeholder="Ej. 0991234567">
+      <span id="errorTelefono" class ="hint">10 dígitos</span>
+    </div>
+
+    <!-- Nombre -->
+    <div class="form-group col-span-2">
+      <label for="nombre">Nombre Completo</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Ej. Carlos Eduardo Mendoza">
+      <span id="errorNombre" class ="hint">Maximo 30 caracteres</span>
+    </div>
+
+    <!-- Dirección -->
+    <div class="form-group col-span-2">
+      <label for="direccion">Dirección</label>
+      <input type="text" id="direccion" name="direccion" placeholder="Ej. Av. 4 de Noviembre y Calle 15">
+      <span id="errorDireccion" class ="hint">Maximo 50 caracteres</span>
+    </div>
+
+    <!-- Correo Electrónico -->
+    <div class="form-group col-span-2">
+      <label for="email">Correo Electrónico</label>
+      <input type="text" id="email" name="email" placeholder="cliente@ejemplo.com">
+      <span id="errorEmail" class ="hint">Ejemplo: usuario@dominio.com</span>
+    </div>
+
+    <!-- Botón de Envío -->
+    <div class="form-actions">
+      <button type="button" id="btnGuardar" class="btn-submit" onclick="validar()">Guardar Cliente</button>
+    </div>
+
+    </form>
+ </div>
+ <script src="script.js"></script>   
+</body>
+</html>
