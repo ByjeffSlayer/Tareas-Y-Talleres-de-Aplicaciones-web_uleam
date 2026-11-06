@@ -1,0 +1,238 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+  background-color: #0b0c0e;
+  color: #e5e7eb;
+  min-height: 100vh;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Layout de 2 columnas tipo Dashboard */
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  gap: 24px;
+  width: 100%;
+  max-width: 1400px;
+  align-items: start;
+}
+
+/* Estilos de Tarjetas */
+.form-card, .table-card {
+  background: #14161a;
+  padding: 28px 30px;
+  border-radius: 12px;
+  border: 1px solid #2a2e37;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+}
+
+.form-card h2, .table-header h3 {
+  font-size: 1.4rem;
+  color: #d4af37; /* Dorado */
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.form-card p {
+  color: #9ca3af;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+
+/* Grid del Formulario */
+.client-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 14px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.col-span-2 {
+  grid-column: span 2;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  color: #d1d5db;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 9px 12px;
+  background: #1c1f26;
+  border: 1px solid #2d323e;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 0.88rem;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.form-group select option {
+  background-color: #1c1f26;
+  color: #ffffff;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.2);
+  background: #222630;
+}
+
+.form-group input::placeholder {
+  color: #525866;
+}
+
+/* Errores y Validaciones */
+.form-group input.invalid,
+.form-group select.invalid {
+  border-color: #ef4444;
+  background: #281818;
+}
+
+.error-msg {
+  font-size: 0.72rem;
+  color: #f87171;
+  margin-top: 3px;
+  min-height: 14px;
+}
+
+.form-actions {
+  margin-top: 8px;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 11px;
+  background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%);
+  color: #0b0c0e;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-submit:hover {
+  background: linear-gradient(135deg, #e5c158 0%, #c59317 100%);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
+}
+
+/* Panel de Tabla Lateral Derecha */
+.table-header {
+  border-bottom: 1px solid #2a2e37;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.table-container {
+  max-height: 620px;
+  overflow-y: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+th, td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #2a2e37;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background-color: #1c1f26;
+  color: #d4af37;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+tr:hover {
+  background-color: #1a1d24;
+}
+
+.student-info-primary {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.student-info-sub {
+  font-size: 0.78rem;
+  color: #9ca3af;
+  margin-top: 2px;
+}
+
+.badge-level {
+  display: inline-block;
+  background: #2a2e37;
+  color: #d4af37;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  margin-top: 4px;
+}
+
+.btn-delete {
+  background-color: #991b1b;
+  color: #fee2e2;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.78rem;
+  transition: background 0.2s ease;
+}
+
+.btn-delete:hover {
+  background-color: #dc2626;
+}
+
+/* Scrollbar personalizada */
+.table-container::-webkit-scrollbar {
+  width: 6px;
+}
+.table-container::-webkit-scrollbar-track {
+  background: #14161a;
+}
+.table-container::-webkit-scrollbar-thumb {
+  background: #2a2e37;
+  border-radius: 3px;
+}
+
+/* Adaptación responsive */
+@media (max-width: 1024px) {
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .client-form {
+    grid-template-columns: 1fr;
+  }
+  .col-span-2 {
+    grid-column: span 1;
+  }
+}

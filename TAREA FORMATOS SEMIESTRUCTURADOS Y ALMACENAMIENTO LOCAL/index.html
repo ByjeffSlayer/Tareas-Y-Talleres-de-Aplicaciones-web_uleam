@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Estudiantes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Contenedor Principal Dashboard de 2 Columnas -->
+  <div class="dashboard-layout">
+    
+    <!-- Columna Izquierda: Formulario -->
+    <div class="form-card">
+      <h2>Registro de Estudiantes</h2>
+      <p>Ingrese los datos para registrar un estudiante.</p>
+      
+      <form id="studentForm" class="client-form" novalidate>
+        
+        <div class="form-group">
+          <label for="cedula">Cédula</label>
+          <input type="text" id="cedula" name="cedula" placeholder="Ej: 1312345678" required>
+          <small class="error-msg"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="Ej: 0991234567" required>
+          <small class="error-msg"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="apellidos">Apellidos</label>
+          <input type="text" id="apellidos" name="apellidos" placeholder="Ej: Pérez Mendoza" required>
+          <small class="error-msg"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="nombres">Nombres</label>
+          <input type="text" id="nombres" name="nombres" placeholder="Ej: Juan Carlos" required>
+          <small class="error-msg"></small>
+        </div>
+
+        <div class="form-group col-span-2">
+          <label for="correo">Correo Electrónico</label>
+          <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+          <small class="error-msg"></small>
+        </div>
+
+        <div class="form-group col-span-2">
+          <label for="direccion">Dirección</label>
+          <input type="text" id="direccion" name="direccion" placeholder="Ej: Av. 108 y Calle 15" required>
+          <small class="error-msg"></small>
+        </div>
+
+        <div class="form-group col-span-2">
+          <label for="facultad">Facultad</label>
+          <select id="facultad" name="facultad" required>
+            <option value="">Seleccione una facultad...</option>
+            <option value="Ingeniería, Industria y Construcción">Ingeniería, Industria y Construcción</option>
+            <option value="Ciencias de la Vida y Tecnologías">Ciencias de la Vida y Tecnologías</option>
+            <option value="Ciencias Médicas">Ciencias Médicas</option>
+            <option value="Educación, Turismo, Artes y Humanidades">Educación, Turismo, Artes y Humanidades</option>
+            <option value="Ciencias Sociales, Derecho y Bienestar">Ciencias Sociales, Derecho y Bienestar</option>
+          </select>
+          <small class="error-msg"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="nivel">Nivel / Semestre</label>
+          <select id="nivel" name="nivel" required>
+            <option value="">Seleccione...</option>
+            <option value="1">1er Nivel</option>
+            <option value="2">2do Nivel</option>
+            <option value="3">3er Nivel</option>
+            <option value="4">4to Nivel</option>
+            <option value="5">5to Nivel</option>
+            <option value="6">6to Nivel</option>
+            <option value="7">7mo Nivel</option>
+            <option value="8">8vo Nivel</option>
+          </select>
+          <small class="error-msg"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="paralelo">Paralelo</label>
+          <input type="text" id="paralelo" name="paralelo" placeholder="Ej: A" maxlength="2" required>
+          <small class="error-msg"></small>
+        </div>
+
+        <div class="form-actions col-span-2">
+          <button type="submit" class="btn-submit">Guardar Estudiante</button>
+        </div>
+
+      </form>
+    </div>
+
+    <!-- Columna Derecha: Vista de Estudiantes Registrados -->
+    <div class="table-card">
+      <div class="table-header">
+        <h3>Estudiantes Registrados</h3>
+      </div>
+      <div class="table-container">
+        <table id="studentsTable">
+          <thead>
+            <tr>
+              <th>Cédula / Nombre</th>
+              <th>Contacto</th>
+              <th>Académico</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <!-- Carga dinámicamente -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
